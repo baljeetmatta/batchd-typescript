@@ -145,7 +145,99 @@
 // data=20;
 // let metric:'cm'|'inch';
 // metric='cms';
+// function drawPoint(x:number,y:number)
+// {
+//     console.log(x,y);
+// }
+// function getDistance(x:number,y:number,x1:number,y1:number)
+// {
+    
+// }
+//drawPoint(10,20)
 
+// function drawPoint(point:{x:number,y:number})
+// {
+//     console.log(point.x,point.y)
+// }
+// function getDistance(point1:{x:number,y:number},point2:{x:number,y:number})
+// {
+
+// }
+
+
+// drawPoint({x:20,y:40})
+
+// type Point={
+//     x:number,
+//     y:number
+// }
+// function drawPoint(point:Point)
+// {
+
+// }
+// function getDistance(point1:Point,point2:Point)
+// {
+
+// }
+class Point{
+//    private _x:number;
+//    private _y:number
+    constructor(private _x:number=0,private _y:number=0)
+    {
+        // this._x=_x;
+        // this._y=y;
+    }
+    ini(x:number,y:number)
+    {
+        this._x=x;
+        this._y=y;
+    }
+    drawPoint()
+    {
+        //object->caller object->this
+        console.log(this._x,this._y)
+    }
+    getDistance(point:Point)//caller,argument
+    {
+        //point.getDistance(point1);
+        //this->point
+        //point-point1
+
+    }
+    set x(value:number)
+    {
+        if(value<0)
+            this._x=0;
+        else
+        this._x=value;
+    }
+    get x()
+    {
+        return this._x;
+    }
+}
+// let point:Point;
+// point=new Point();
+
+//let point:Point=new Point();
+let point=new Point();
+//point.x=-40;
+//point.drawPoint();
+// point.X=30;//set
+// console.log(point.X);//get
+point.x=20;
+
+
+//point.setX(-40);
+point.drawPoint();
+
+point.ini(20,30);
+
+let point1=new Point(10,20);
+
+
+point.drawPoint();
+point.getDistance(point1);
 
 
 
